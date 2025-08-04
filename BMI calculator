@@ -1,0 +1,39 @@
+//A BMI calculator is a simple tool that helps estimate whether a person’s weight is in a healthy range for their height. BMI stands for Body Mass Index,
+import java.util.Scanner;
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the user name: ");
+		String name=sc.nextLine();
+
+		System.out.println("enter the user weight in kg");
+		double weight=sc.nextDouble();
+
+		System.out.println("enter the user height in mtr");
+		double height=sc.nextDouble();
+
+		double bmi=weight/(height*height);
+		System.out.println("bmi of " +name +" is "+bmi);
+
+		if (bmi < 18.5)
+			{
+             System.out.println("You are underweight.");
+		    } 
+		else if (bmi < 24.9) 
+			{ 
+			System.out.println("You have a normal weight.");
+			}
+        else if (bmi < 29.9) 
+			{
+              System.out.println("You are overweight.");
+			} 
+		else 
+			{
+             System.out.println("You are obese.");
+			}
+
+
+	}
+}
